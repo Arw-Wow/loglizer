@@ -15,6 +15,7 @@ import numpy as np
 from sklearn import svm
 from ..utils import metrics
 
+
 class SVM(object):
 
     def __init__(self, penalty='l1', tol=0.1, C=1, dual=False, class_weight=None, 

@@ -70,8 +70,8 @@ class PCA(object):
         I = np.identity(num_events, int)
         self.components = P
         self.proj_C = I - np.dot(P, P.T)
-        print('n_components: {}'.format(n_components))
-        print('Project matrix shape: {}-by-{}'.format(self.proj_C.shape[0], self.proj_C.shape[1]))
+        # print('n_components: {}'.format(n_components))
+        # print('Project matrix shape: {}-by-{}'.format(self.proj_C.shape[0], self.proj_C.shape[1]))
 
         if not self.threshold:
             # Calculate threshold using Q-statistic. Information can be found at:
@@ -84,7 +84,7 @@ class PCA(object):
             self.threshold = phi[0] * np.power(self.c_alpha * np.sqrt(2 * phi[1] * h0 * h0) / phi[0]
                                                + 1.0 + phi[1] * h0 * (h0 - 1) / (phi[0] * phi[0]), 
                                                1.0 / h0)
-        print('SPE threshold: {}\n'.format(self.threshold))
+        # print('SPE threshold: {}\n'.format(self.threshold))
 
     def predict(self, X):
         assert self.proj_C is not None, 'PCA model needs to be trained before prediction.'

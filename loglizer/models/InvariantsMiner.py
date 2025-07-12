@@ -15,6 +15,7 @@ import numpy as np
 from itertools import combinations
 from ..utils import metrics
 
+
 class InvariantsMiner(object):
 
     def __init__(self, percentage=0.98, epsilon=0.5, longest_invarant=None, scale_list=[1,2,3]):

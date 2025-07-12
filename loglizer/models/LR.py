@@ -16,6 +16,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from ..utils import metrics
 
+
 class LR(object):
 
     def __init__(self, penalty='l2', C=100, tol=0.01, class_weight=None, max_iter=100):
